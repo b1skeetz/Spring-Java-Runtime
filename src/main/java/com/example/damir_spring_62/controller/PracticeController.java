@@ -13,8 +13,6 @@ import java.util.*;
 @RequestMapping(path = "/practice_controller")
 public class PracticeController {
 
-    private Map<String, String> properties = new HashMap<>();
-
     private Product[] products = new Product[]{
             new Product("Xiaomi 13", 320000, Categories.SMARTPHONES.name(), Map.of("ОЗУ", "12 Гб", "Память", "256 Гб")),
             new Product("Bloody S98 Naraka", 35000, Categories.KEYBOARDS.name(), Map.of("Размер", "90%", "Цвет", "Красный")),
