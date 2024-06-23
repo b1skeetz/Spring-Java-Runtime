@@ -1,0 +1,14 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Title</title>
+</head>
+<body>
+    <th:block th:if="${product.getPrice() > 1000000}">
+        <p>Name: <b th:text="${product.getName()}"></b></p>
+        <p>Price: <b th:text="${product.getPrice()}"></b></p>
+        <p>Category: <b th:text="${product.getCategory()}"></b></p>
+    </th:block>
+</body>
+</html>
