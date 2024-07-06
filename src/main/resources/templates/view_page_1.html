@@ -5,9 +5,9 @@
     <title>Title</title>
 </head>
 <body>
-    <form th:method="GET" th:action="@{/products_task/products/filter{category}(category = ${category})}" th:object="${category}">
+    <form th:method="GET" th:action="@{/data/products/filter{categoryName}(categoryName = ${category})}" th:object="${category}">
         <label for="category">
-            <input type="text" id="category" th:name="category"  th:value="${category}" placeholder="Введите название категории...">
+            <input type="text" id="category" th:name="categoryName"  th:value="${category}" placeholder="Введите название продукта...">
             <input type="submit" value="Отфильтровать">
         </label>
     </form>
@@ -15,7 +15,7 @@
     <br/>
 
     <th:block th:each="product : ${products}">
-        <p>Категория: <b th:text="${product.getCategory().toString()}"/></p>
+        <p>Категория: <b th:text="${product.getCategory().getName()}"/></p>
         <p>Название: <b th:text="${product.getName()}"/></p>
         <p>Стоимость: <b th:text="${product.getPrice()}"/></p>
         <hr>
